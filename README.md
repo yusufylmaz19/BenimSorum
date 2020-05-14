@@ -1,1 +1,1 @@
-# BenimSorum
+# BenimSorum girilen ax^2+bx+c formatındaki yani ikinci dereceden denklemlerde delta ile kök bulup kökler çarpımı ve kökler toplamını  kullanıcdan a,b ve c değerlerini alarak sonuçları ekran  yazdıran java kodu.
