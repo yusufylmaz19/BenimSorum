@@ -2,7 +2,7 @@ package sorum;
 
 import java.util.Scanner;
 
-class kökbul {
+class kÃ¶kbul {
 	double a;
 	double b;
 	double c;
@@ -11,44 +11,44 @@ class kökbul {
 	double x;
 	protected double delta;
 
-	kökbul(double a, double b, double c) {
+	kÃ¶kbul(double a, double b, double c) {
 		this.a = a;
 		this.b = b;
 		this.c = c;
 	}
 
-	public double birincikökhesapla() {
+	public double birincikÃ¶khesapla() {
 		return x1 = (-b - Math.sqrt(delta)) / 2 * a;
 	}
 
-	public double ikincikökhesapla() {
+	public double ikincikÃ¶khesapla() {
 		return x2 = (-b + Math.sqrt(delta)) / 2 * a;
 
 	}
 
-	public double cakısıkkökhesapla() {
+	public double cakÃ½sÃ½kkÃ¶khesapla() {
 		return x = Math.sqrt(c / a);
 
 	}
 
-	public double delta(kökbul d) {
+	public double delta(kÃ¶kbul d) {
 		delta = d.b * d.b - 4 * d.a * d.c;
 		if (delta < 0) {
-			System.out.println("reel kök yok ");
+			System.out.println("reel kÃ¶k yok ");
 		} else if (delta > 0) {
 
-			System.out.println("delta sıfırdan büyük ve iki kök var " + "\nbirinci kök=" + birincikökhesapla()
-					+ " \nikinci kök=" + ikincikökhesapla());
+			System.out.println("delta sÃ½fÃ½rdan bÃ¼yÃ¼k ve iki kÃ¶k var " + "\nbirinci kÃ¶k=" + birincikÃ¶khesapla()
+					+ " \nikinci kÃ¶k=" + ikincikÃ¶khesapla());
 		} else {
-			System.out.println("delta sıfıra eşit ve çakışık iki kök var \nkökler = " + cakısıkkökhesapla() + "-"
-					+ cakısıkkökhesapla());
+			System.out.println("delta sÃ½fÃ½ra eÃ¾it ve Ã§akÃ½Ã¾Ã½k iki kÃ¶k var \nkÃ¶kler = " + cakÃ½sÃ½kkÃ¶khesapla() + "-"
+					+ cakÃ½sÃ½kkÃ¶khesapla());
 		}
 		return delta;
 
 	}
 }
 
-class toplam extends kökbul {
+class toplam extends kÃ¶kbul {
 
 	toplam(double a, double b, double c) {
 		super(a, b, c);
@@ -57,30 +57,30 @@ class toplam extends kökbul {
 
 	private void topla() {
 
-		double toplam = birincikökhesapla() + ikincikökhesapla();
-		System.out.println("Kökler toplamı= "+toplam);
+		double toplam = birincikÃ¶khesapla() + ikincikÃ¶khesapla();
+		System.out.println("KÃ¶kler toplamÃ½= "+toplam);
 	}
 
-	void göster() {
+	void gÃ¶ster() {
 		topla();
 	}
 }
 
-class carpım extends kökbul {
+class carpÃ½m extends kÃ¶kbul {
 
-	carpım(double a, double b, double c) {
+	carpÃ½m(double a, double b, double c) {
 		super(a, b, c);
 
 	}
 
-	private void topla() {
+	private void carp() {
 
-		double carp = birincikökhesapla() * ikincikökhesapla();
-		System.out.println("kökler Çarpımı "+carp);
+		double carp = birincikÃ¶khesapla() * ikincikÃ¶khesapla();
+		System.out.println("kÃ¶kler Ã‡arpÃ½mÃ½ "+carp);
 	}
 
-	void göster() {
-		topla();
+	void gÃ¶ster() {
+		carp();
 	}
 }
 
@@ -89,17 +89,17 @@ public class soru {
 
 	public static void main(String[] args) {
 		input = new Scanner(System.in);
-		System.out.println("Lütfen a değerini girin");
+		System.out.println("LÃ¼tfen a deÃ°erini girin");
 		double a = input.nextDouble();
-		System.out.println("Lütfen b değerini girin");
+		System.out.println("LÃ¼tfen b deÃ°erini girin");
 		double b = input.nextDouble();
-		System.out.println("Lütfen c değerini girin");
+		System.out.println("LÃ¼tfen c deÃ°erini girin");
 		double c = input.nextDouble();
-		kökbul kök = new kökbul(a, b, c);
-		kök.delta(kök);
+		kÃ¶kbul kÃ¶k = new kÃ¶kbul(a, b, c);
+		kÃ¶k.delta(kÃ¶k);
 		toplam top = new toplam(a, b, c);
-		top.göster();
-		carpım carp = new carpım(a, b, c);
-		carp.göster();
+		top.gÃ¶ster();
+		carpÃ½m carp = new carpÃ½m(a, b, c);
+		carp.gÃ¶ster();
 	}
 }
