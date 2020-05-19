@@ -8,7 +8,7 @@ class kökbul {
 	double c;
 	double x1;
 	double x2;
-	double x;
+	private double x;
 	protected double delta;
 
 	kökbul(double a, double b, double c) {
@@ -40,7 +40,7 @@ class kökbul {
 			System.out.println("delta sýfýrdan büyük ve iki kök var " + "\nbirinci kök=" + birincikökhesapla()
 					+ " \nikinci kök=" + ikincikökhesapla());
 		} else {
-			System.out.println("delta sýfýra eþit ve çakýþýk iki kök var \nkökler = " + cakýsýkkökhesapla() + "-"
+			System.out.println("delta sýfýra eþit ve çakýþýk iki kök var \nkökler = " + cakýsýkkökhesapla() + " , "
 					+ cakýsýkkökhesapla());
 		}
 		return delta;
@@ -56,9 +56,10 @@ class toplam extends kökbul {
 	}
 
 	private void topla() {
-
+             if(delta>0){
 		double toplam = birincikökhesapla() + ikincikökhesapla();
 		System.out.println("Kökler toplamý= "+toplam);
+	     }
 	}
 
 	void göster() {
@@ -74,9 +75,10 @@ class carpým extends kökbul {
 	}
 
 	private void carp() {
-
+                 if(delta>0){
 		double carp = birincikökhesapla() * ikincikökhesapla();
 		System.out.println("kökler Çarpýmý "+carp);
+		 }
 	}
 
 	void göster() {
